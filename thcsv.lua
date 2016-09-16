@@ -21,7 +21,7 @@ function M.write(csvFile, tensor, header)
   if tensor:nDimension() ~= 2 then
     error('Input tensor should have size "nRows x nCols"')
   end
-  fid = io.open(csvFile, 'wb')
+  local fid = io.open(csvFile, 'wb')
   if not fid then error(('Incorrect filename "%s"'):format(csvFile)) end
   if header then
     for i = 1,#header do
