@@ -10,7 +10,7 @@ function M.read(csvFile, separator, skipFirst)
   local splits = str:split('\n')
   local i0 = skipFirst and 1 or 0
   local nRows = #splits - i0
-  local nCols = #splits[i0+1]:split(',')
+  local nCols = #splits[i0+1]:split(separator)
   local output = torch.Tensor(nRows, nCols)
   for i = 1, nRows do
     output[i]:copy(torch.Tensor(splits[i + i0]:split(separator)))
