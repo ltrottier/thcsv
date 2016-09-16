@@ -1,8 +1,8 @@
 package = "thcsv"
-version = "scm-1"
+version = "1.0-1"
 
 source = {
-   url = "git://github.com/ltrottier/thcsv",
+   url = "git://github.com/ltrottier/thcsv.git",
    tag = "master"
 }
 
