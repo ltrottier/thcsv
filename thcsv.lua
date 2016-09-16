@@ -18,7 +18,8 @@ function M.read(csvFile, separator, skipFirst)
   return output
 end
 
-function M.write(csvFile, tensor, header)
+function M.write(csvFile, tensor, header, separator)
+  local separator = separator or ', ' 
   if tensor:nDimension() ~= 2 then
     error('Input tensor should have size "nRows x nCols"')
   end
@@ -28,7 +29,7 @@ function M.write(csvFile, tensor, header)
     for i = 1,#header do
       fid:write(header[i])
       if i < #header then
-        fid:write(', ')
+        fid:write(separator)
       end
     end
     fid:write('\n')
@@ -37,7 +38,7 @@ function M.write(csvFile, tensor, header)
     for j = 1,tensor:size(2) do
       fid:write(tensor[i][j])
       if j < tensor:size(2) then
-        fid:write(', ')
+        fid:write(separator)
       end
     end
     fid:write('\n')
