@@ -1,6 +1,7 @@
 local M = {}
 
-function M.read(csvFile, skipFirst)
+function M.read(csvFile, separator, skipFirst)
+  local separator = separator or ','
   local skipFirst = skipFirst or false
   local fid = io.open(csvFile, 'rb')
   if not fid then error(('Incorrect filename "%s"'):format(csvFile)) end
@@ -12,7 +13,7 @@ function M.read(csvFile, skipFirst)
   local nCols = #splits[i0+1]:split(',')
   local output = torch.Tensor(nRows, nCols)
   for i = 1, nRows do
-    output[i]:copy(torch.Tensor(splits[i + i0]:split(',')))
+    output[i]:copy(torch.Tensor(splits[i + i0]:split(separator)))
   end
   return output
 end
