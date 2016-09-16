@@ -15,9 +15,9 @@ thcsv = require 'thcsv'
 #### How To Read CSV ####
 
 ```lua
-output = thcsv.read(csvFile, [skipFirst = false])
+output = thcsv.read(csvFile, [separator = ',', skipFirst = false])
 ```
-Reads the content of file `csvFile` and store it into `output`. The `output` tensor will have a size of `nRows x nCols`. For CSV files with a header containing a list of field names, you must call the function with `skipFirst = true`.
+Reads the content of file `csvFile` and store it into `output`. The `output` tensor will have a size of `nRows x nCols`. For CSV files with a header containing a list of field names, you must call the function with `skipFirst = true`. Values are comma-separated by default (separator can be specified using 'separator')
 
 #### How To Write CSV ####
 
