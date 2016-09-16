@@ -1,2 +1,2 @@
-local thcsv = require 'thcsv'
+local thcsv = require 'thcsv.thcsv'
 return thcsv

@@ -26,5 +26,6 @@ build = {
    type = "builtin",
    modules = {
       ["thcsv.thcsv"] = "thcsv.lua",
+      ["thcsv.init"] = "init.lua",
    }
 }
