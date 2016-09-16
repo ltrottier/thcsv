@@ -26,7 +26,7 @@ thcsv.write(csvFile, input, [header = {}])
 ```
 Write the content of `input` into file `csvFile`, where `input` is a `nRows x nCols` tensor. Additionally, provide a table of field names `header = {id1, id2, ...}` to add a header to the CSV file.
 
- #### Example ####
+#### Example ####
 ```lua
 thcsv = require 'thcsv'
 thcsv.write('eye.csv', torch.eye(5))
