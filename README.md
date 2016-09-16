@@ -5,7 +5,7 @@ A simple CSV library for reading / writing Torch [tensor](https://github.com/tor
 #### Installation ####
 From a terminal:
 ```bash
-luarocks install --server=http://luarocks.org/dev thcsv
+luarocks install thcsv
 ```
 then:
 ```lua
