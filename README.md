@@ -5,7 +5,7 @@ A simple CSV library for reading / writing Torch [tensor](https://github.com/tor
 #### Installation ####
 From a terminal:
 ```bash
-luarocks install thcsv
+luarocks install https://raw.githubusercontent.com/ltrottier/thcsv/master/thcsv-1.0-1.rockspec
 ```
 then:
 ```lua
@@ -39,5 +39,3 @@ output
  0  0  0  0  1
 [torch.DoubleTensor of size 5x5]
 ```
-
-
